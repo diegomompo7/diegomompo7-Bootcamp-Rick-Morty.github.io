@@ -1,0 +1,97 @@
+.footer{
+    background-color: $fourth-color;
+    height: 263px;
+    margin-bottom: 15px;
+    border-bottom: 30px solid $sixth-color;
+
+    @include adapTo('not-mobile'){
+        height: 120px;
+    }
+    @include adapTo('only-desktop'){
+        border-bottom: 0px;
+        height: 100px;
+    }
+    @include adapTo('desktop-xl'){
+        max-width: 1280px;
+        border-radius: 20px;
+    }
+
+
+    &__text{
+        margin-bottom: 27px;
+   
+
+        @include adapTo('not-mobile'){
+            position: absolute;
+            align-items: center;
+            width: 20%;
+            margin: 0px auto 27px 45px;
+        }
+        @include adapTo('only-desktop'){
+            margin-left: 0px;
+        }
+        @include adapTo('desktop-l'){
+            width: 18%;
+        }
+
+    
+
+    &-title{
+        padding-top: 45px;
+        font-size: 20px;
+        text-decoration: underline;
+        color: $fifth-color;
+        text-align: center;
+        @include adapTo('not-mobile'){
+              padding-top: 22px;
+        }
+    }     
+    &-subtitle{
+        font-size: 18px;
+        font-weight: 700;
+        display: block;
+        color: $fifth-color;
+        text-align: center;
+    }}
+
+    
+    &__nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        @include adapTo('not-mobile'){
+            position: absolute;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-top: 30px;
+            width: 95%;
+        }
+        @include adapTo('only-desktop'){
+            width: 100%;
+        }
+        @include adapTo('desktop-xl'){
+            width: 90%;
+            padding-right: 130px;
+        }
+
+        &-link{
+            text-decoration: none;
+            font-size: 16px;
+            color: $fifth-color;
+            @include adapTo('not-mobile'){
+                font-size: 18px;
+                padding-right: 25px;
+            }
+            @include adapTo('only-desktop'){
+                padding-right: 56px;
+            }
+            @include adapTo('desktop-l'){
+                padding-right: 30px;
+            }
+        
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.header{
+    background-color: $eighth-color;
+    height: 50px;
+    width: 100%;
+    @include adapTo('not-mobile'){
+        height: 75px;
+    }
+    @include adapTo('desktop-xl'){
+        max-width: 1280px;
+    }
+
+    &__title{
+        padding-top: 6px;
+        font-size: 16px;
+        text-decoration: underline;
+        color: $first-color;
+        text-align: center;
+        @include adapTo('not-mobile'){
+            padding-top: 9px;
+            font-size: 20px;
+        }
+    }
+    &__subtitle{
+        font-size: 12px;
+        font-weight: 700;
+        display: block;
+        text-decoration: none;
+        color: $first-color;
+        text-align: center;
+        padding-bottom: 5px;
+        @include adapTo('not-mobile'){
+        
+            font-size: 18px;
+        }
+    }
+    &--home{
+        background-image: url(../../assets/images/rick_morty-fondo.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        height: 75vh;
+        width: 100%;
+        @include adapTo('min-desktop-l'){
+            max-width: 1328px;
+            background-color: $first-color;
+        }
+
+        .header__title{
+            padding-top: 104px;
+            font-size: 36px;
+            @include adapTo('tablet'){
+                font-size: 45px;
+            }
+            @include adapTo('only-desktop'){
+                font-size: 60px;
+            }
+        }
+        .header__subtitle{
+            font-size: 28px;
+            @include adapTo('tablet'){
+                font-size: 33px;
+            }
+            @include adapTo('only-desktop'){
+                font-size: 50px;
+            }
+        }
+    }
+}
+//45,33  60,50

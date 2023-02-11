@@ -1,0 +1,196 @@
+.section-container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.card{
+    width: 100%;
+    margin-left: 10px;
+    margin: 10px;
+    border-radius:  20px;
+    margin-bottom: 18px;
+    -webkit-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.25);
+
+    @include adapTo('tablet'){
+        max-width: 350px;
+        width: 50%;
+    }
+    @include adapTo('only-desktop'){
+        width: 33%;
+    }
+    @include adapTo('desktop-m'){
+        max-width: 310px;
+    }
+    @include adapTo('min-desktop-l'){
+        max-width: 400px;
+    }
+
+
+
+    &__text{
+        
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &-name{
+            font-size: 14px;
+            padding-top: 9px;
+            padding-left: 24px;
+            color: $eighth-color;
+            font-weight: 700;
+            margin-right: 70px;
+
+            @include adapTo('not-mobile'){
+                font-size: 18px;
+            }
+        
+        }
+        &--detail2{
+            border-radius: 20px;
+            background-color: $fourth-color;
+            width: 277px;
+            height: auto;
+            margin-top: 21px;
+            margin-left: 22px;
+
+            @include adapTo('tablet'){
+                width: 323px;
+            }
+            @include adapTo('desktop-l'){
+                width: 295px;
+            }
+            @include adapTo('min-desktop-l'){
+                width: 369px;
+            }
+
+            &-name{
+                padding-top: 15px;
+                padding-bottom: 20px;
+                text-align: center;
+                font-size: 18px;
+                color: $eighth-color;
+            }
+        }
+    }   
+    &__status{
+        
+        &-alive{
+            background-color: $tenth-color;
+        }
+        &-dead{
+            background-color: $thirdteenth-color;
+        }
+        &-unknown{
+            background-color: $fourteenth-color;
+        }
+
+        width: 69px;
+        height: 21px;
+        margin-top: 9px;
+        margin-right: 20px;
+        display: block;
+
+        &-text{
+            font-size: 10px;
+            text-align: center;
+            font-weight: 700;
+            color: $first-color;
+            padding-top: 4px;
+
+            @include adapTo('not-mobile'){
+                font-size: 14px;
+                padding-top: 0px;
+            }
+        }
+    }
+    &__container{
+        display: flex;
+        justify-content: flex-start;
+
+        &-img{
+            max-width: 150px;
+            height: 16vh;
+            width: 50%;
+            padding-left: 24px;
+            padding-top: 6px;
+            display:block
+
+        }
+    }
+    &__info-container{
+        padding-left: 9px;
+        width: 50%;
+
+        &--details2{
+            display: flex;
+            margin-top: 25px;
+            margin-left: 54px;
+            
+            @include adapTo('not-mobile'){
+                margin-left: 63px;
+            }
+            @include adapTo('min-desktop-l'){
+                margin-left: 100px;
+            }
+            
+        }
+    }
+    &__info-title{
+        font-size: 10px;
+        font-weight: 700;
+        color: $eleventh-color;
+        @include adapTo('not-mobile'){
+            font-size: 12px;
+        }
+        &--details2{
+            text-align: center;
+        }
+    }
+    &__info--type{
+        border-right: 1px solid black;
+        width: auto;
+        padding-right: 40px;
+        margin-right: 40px;
+    }
+    &__info--dimension{
+        width: auto;
+    }
+    &__info{
+        font-size: 14px;
+        color: $twelveth-color;
+        margin-bottom: 4px;
+        
+        &--details2{
+            text-align: center;
+        }
+    }
+        @include adapTo('not-mobile'){
+            font-size: 16px;
+        }
+
+    }
+
+    &__more{
+        margin-top: 9px;
+        margin-left: 24px;
+        margin-bottom: 22px;
+        padding-bottom: 25px;
+        border-radius: 50px;
+        width: 89%;
+        height: 21px;
+        background-color: $second-color;
+        text-align: center;
+
+        &-link{
+            font-size: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            color: $eighth-color;
+            @include adapTo('not-mobile'){
+                font-size: 16px;
+            }
+        }
+    }

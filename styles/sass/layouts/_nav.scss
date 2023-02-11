@@ -1,0 +1,56 @@
+.nav{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align:  center;
+    margin-top: 57px;
+
+    @include adapTo('only-desktop'){
+        background-color: $seventh-color;
+        height: 298px;
+        width: 100%;
+    }
+    @include adapTo('min-desktop-l'){
+        max-width: 1328px;
+    }
+    @include adapTo('desktop-xl'){
+        border-radius: 20px;
+        margin-bottom: 31px;
+    }
+
+    &__link{
+        font-size: 24px;
+        font-weight: 700;
+        text-decoration: none;
+        color: $third-color;
+        background-color: $second-color;
+        border-radius: 300px;
+        width: 88%;
+        height: 150px;
+        padding-top: 57px;
+        margin-bottom: 54px;
+        text-align: center;
+        margin-left: 10px;
+
+        @include adapTo('not-mobile'){
+            margin-bottom: 112px;
+        }
+        @include adapTo('tablet'){
+            font-size: 32px;
+            width: 65%;
+        }
+        @include adapTo('desktop-m'){
+            margin-top: 65px;
+            margin-right: 40px;
+            font-size: 24px;
+            width: 27%;
+        }
+        @include adapTo('min-desktop-l'){
+            margin-top: 65px;
+            margin-right: 40px;
+            font-size: 32px;
+            width: 27%;
+        }
+    }
+}

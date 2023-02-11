@@ -1,0 +1,40 @@
+.section{
+    &__more{
+        display: flex;
+        justify-content: center;
+        margin-top: 65px;
+        margin-bottom: 79px;
+        
+        &-details{
+            background-color: $eighth-color;
+            color: $first-color;
+            background-color: $eighth-color;
+            color: $first-color;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 26px;
+            width: 120px;
+            height: 30px;
+    
+            @include adapTo('not-mobile'){
+                width: 150px;
+                height: 40px;
+                font-size: 24px;
+            }
+                
+            @include adapTo('not-mobile'){
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+                
+        }
+    }
+}
+/* 
+1. 65-79
+2. 64-69
+3. 78-81
+4. 92-81
+
+
+*/

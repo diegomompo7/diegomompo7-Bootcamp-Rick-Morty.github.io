@@ -1,0 +1,33 @@
+.section {
+    &__text{
+        width: 100%;
+        background-color: $ninth-color;
+        height: 35px;
+        @include adapTo('not-mobile'){
+            height: 45px;
+            
+        }
+        @include adapTo('desktop-xl'){
+            max-width: 1280px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        &-title{
+            font-size: 14px;
+            font-weight: 700;
+            padding:  7px;
+            color: $eighth-color;
+            text-align: center;
+            @include adapTo('not-mobile'){
+                font-size: 18px;
+            }
+        }
+    }
+    &-container{
+        @include adapTo('desktop-xl'){
+            max-width: 1280px;
+        }
+    
+    }
+}

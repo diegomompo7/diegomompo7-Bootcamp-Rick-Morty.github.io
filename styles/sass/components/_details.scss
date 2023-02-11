@@ -1,0 +1,247 @@
+.detail{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @include adapTo('only-desktop'){
+        max-width: 1024px;
+    }
+
+    @include adapTo('min-desktop-l'){
+        margin: 61px auto  62px auto;
+        -webkit-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.25);
+        -moz-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.25);
+        box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.25);
+    }
+    @include adapTo('desktop-xl'){
+        border: 1px solid $twelveth-color;
+        margin-left: 208px;
+    }
+    &--location{
+        @include adapTo('desktop-xl'){
+            border: 0px;
+            margin-left: 208px;
+        }
+    }
+
+
+
+    &__container{
+        margin: auto;
+
+        
+        @include adapTo('not-mobile'){
+            display: flex;
+            justify-content: flex-start;
+            padding-top: 44px;
+            flex-direction: column;
+            margin: 0;
+            width: 30%;
+            background-color: #F2F2F2;
+        }
+        @include adapTo('only-desktop'){
+            justify-content: flex-start;
+            width: 25%;
+        }
+
+        &-img{
+            margin: 0 auto;
+            width: 205px;
+            border-radius: 100px;
+            border: 4px solid $ninth-color;
+        }
+        &-title{
+            font-size: 20px;
+            text-decoration: underline;
+            text-align: center;
+            color: $eighth-color;
+            font-weight: 700;
+
+            &--detail2{
+                font-size: 20px;
+                color: $eighth-color;
+                font-weight: 700;
+                text-align: center;
+                padding-top: 13px;
+
+                @include adapTo('not-mobile'){
+                    font-size: 40px;
+                }
+                @include adapTo('desktop-xl'){
+                    padding-right: 60px;
+                    border-right: 3px solid $ninth-color;
+                }
+            }
+            
+        }
+        &--detail2{
+            background-color: $fourth-color;
+            border-radius: 20px;
+            margin: 0 auto;
+            margin-top: 30px;
+            width: 288px;
+            height: 52px;
+            margin-bottom: 29px;
+
+            @include adapTo('not-mobile'){
+                display: flex;
+                flex-wrap: wrap;
+                height: auto;
+                margin: 0;
+                align-items: center;
+                width: 38%;
+                border-radius: 0;
+                justify-content: center;
+                background-color: #F2F2F2;
+            }
+            @include adapTo('desktop-xl'){
+                background-color: $first-color;
+            }
+        }
+    }
+    &__info{
+
+        @include adapTo('not-mobile'){
+
+            padding-top: 44px;
+            width: 70%;
+        }
+
+        @include adapTo('only-desktop'){
+
+            width: 75%;
+        }
+        &--detail2{
+            @include adapTo('not-mobile'){
+
+                padding-top: 44px;
+                width: 61%;
+            }
+        }
+        &-container{
+            @include adapTo('only-desktop'){
+                display: flex;
+                flex-wrap: wrap;
+                width: 41%;
+            }
+            
+        }
+        &-title{
+            font-size: 14px;
+            margin-left: 27px;
+            color: $eleventh-color;
+            font-weight: 700;
+            padding-bottom: 6px;
+        }
+        &-status{
+            display: flex;
+            flex-direction: row;
+            margin-left: 27px;
+            margin-bottom: 21px;
+
+            &-text{
+                text-align: center;
+                font-size: 14px;
+                color: $twelveth-color;
+                background-color: $fifteenth-color;
+                border-radius: 20px;
+                width: 73px;
+                margin-right: 10px;
+                padding-top: 5px;
+                height: 30px;
+
+                &-alive{
+                    background-color: $tenth-color;
+                }
+                &-dead{
+                    background-color: $thirdteenth-color;
+                }
+                &-unknown{
+                    background-color: $fourteenth-color;
+                }
+
+            }
+        }
+        &-description{
+            width: 278px;
+            font-size: 18px;
+            margin-left: 27px;
+            color: $twelveth-color;
+            margin-bottom: 21px;
+            border-radius: 20px;
+            padding-left: 10px;
+            height: 30px;
+            background-color: $fifteenth-color;
+
+            @include adapTo('tablet'){
+
+                width: 398px;
+            }
+
+            @include adapTo('only-desktop'){
+
+                width: 190px;
+            }
+        }
+        &-detail2{
+            margin-bottom: 21px;
+            margin-left: 27px;
+
+            button{
+                width: 278px;
+                text-align: left;
+                padding-left: 10px;
+                border-style: none;
+
+                @include adapTo('tablet'){
+
+                    width: 398px;
+                }
+                @include adapTo('only-desktop'){
+
+                    width: 190px;
+                }
+            }
+        }
+    }
+
+    &__episode{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 53px;
+    }
+    &__residents{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 53px;
+
+    }
+    &__options{
+        font-size: 18px;
+        color: $twelveth-color;
+        background-color: $second-color;
+        height: 30px;
+        border-radius: 100px;
+        text-decoration: none;
+
+        &-episode{
+            margin-left: 27px;
+            margin-bottom: 9px;
+            margin-right: 11px;
+            width: 38px;
+            border-style: none;
+
+        }
+        &-residents{
+            margin-left: 27px;
+            margin-bottom: 9px;
+            width: 70px;
+            height: 70px;
+            border-style: none;
+
+        }
+    }
+
+}
